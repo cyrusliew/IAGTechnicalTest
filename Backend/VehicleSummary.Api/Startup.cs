@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using VehicleSummary.Api.Services.VehicleSummary;
 
 namespace VehicleSummary.Api
 {
@@ -26,6 +27,7 @@ namespace VehicleSummary.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddScoped<IVehicleSummaryService, VehicleSummaryService>();
             
             // add the DI stuff here
         }

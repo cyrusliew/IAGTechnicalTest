@@ -21,7 +21,7 @@ namespace VehicleSummary.Api.Controllers
         {
             var response = await _vehicleSummaryService.GetSummaryByMake(make);
             
-            return Ok(make);
+            return Ok(response);
         }
     }
 }
